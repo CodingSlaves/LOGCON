@@ -347,6 +347,19 @@ html, body {
 
 
 
+/* 진짜 문제 페이지들 */
+.paper {
+    width: 800px;
+    margin: 100px auto;
+    border-top: 15px dashed #444448;
+    border-bottom: 15px solid #71bd46;
+    padding: 50px;
+    background: #fefff3;
+}
+/* 진짜 문제 페이지들 끝 */
+
+
+
 /* 공통 */
 .container-out {
     display: table;

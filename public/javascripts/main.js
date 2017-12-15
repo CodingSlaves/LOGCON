@@ -13,7 +13,7 @@ onload = function () {
         } else {
             challengeSortBox.classList.remove("on");
         }
-    })
+    });
 
     logInTab.addEventListener("click", function () {
         logInTab.classList.remove("disabled");

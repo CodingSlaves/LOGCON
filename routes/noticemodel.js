@@ -8,5 +8,5 @@ var NoticeSchema = new schema({
     notice:{type:Boolean}
 });
 
-var NoticeModel = mongoose.model('Problem',NoticeSchema);
+var NoticeModel = mongoose.model('Notice',NoticeSchema);
 module.exports = NoticeModel;

@@ -19,27 +19,27 @@
         <img class="logo" src="/images/logo.png">
         <div class="nav">
             <div class="nav-item">
-                <a href="index.ejs">
+                <a href="/">
                     메인
                 </a>
             </div>
             <div class="nav-item">
-                <a href="notice.ejs">
+                <a href="/notice">
                     공지
                 </a>
             </div>
             <div class="nav-item">
-                <a href="challenge.ejs">
+                <a href="/challenge">
                     고등문제
                 </a>
             </div>
             <div class="nav-item">
-                <a href="challenge-middle.ejs">
+                <a href="/challenge-middle">
                     중등문제
                 </a>
             </div>
             <div class="nav-item">
-                <a href="ranking.ejs">
+                <a href="/ranking">
                     순위
                 </a>
             </div>
@@ -64,26 +64,14 @@
                 <th class="rank-score">점수</th>
             </tr>
 
-            <% for (var i = 1; i <= userprofile.length; i++) { %>   <!-- 플레이어 -->
+            <% for (var i = 1; i <= user.length; i++) { %>   <!-- 플레이어 -->
                 <tr>
                     <td><%= i%></td>    <!-- 플레이어[i].랭킹 -->
-                    <td><%= userprofile[i].name %></td>    <!-- 플레이어[i].닉네임 -->
-                    <td><%= userprofile[i].school %></td>    <!-- 플레이어[i].소속 -->
-                    <td><%= userprofile[i].score %></td>    <!-- 플레이어[i].점수 -->
+                    <td><%= user[i].name %></td>    <!-- 플레이어[i].닉네임 -->
+                    <td><%= user[i].school %></td>    <!-- 플레이어[i].소속 -->
+                    <td><%= user[i].score %></td>    <!-- 플레이어[i].점수 -->
                 </tr>
             <% } %>
-
-
-
-            <!-- 테스트용이니 실제 서버가 가동되면 이 부분은 지우세요 -->
-                <tr>
-                    <td>13</td>
-                    <td>슬라임잼</td>
-                    <td>선린인터넷고등학교</td>
-                    <td>150</td>
-                </tr>
-            <!-- 여기까지 지우시면 됩니다. -->
-
 
 
         </table>

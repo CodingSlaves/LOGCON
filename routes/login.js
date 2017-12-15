@@ -31,8 +31,8 @@ router.post('/',function(req,res){
         }
         else{
             console.log("ID Error");
-            res.render('login',{
-                err:' (ID Error)'
+            res.render('404',{
+                message:' (ID Error)'
             });
         }
     })

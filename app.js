@@ -15,7 +15,13 @@ var login = require('./routes/login.js');
 var SignUp =  require('./routes/SignUp.js');
 var problem = require('./routes/problem.js');
 var InsertP = require('./routes/InsertP.js');
-
+var challenge = require('./routes/challenge.js');
+var challenge_middle = require('./routes/challenge-middle.js');
+var notice = require('./routes/notice.js');
+var upnotice = require('./routes/upnotice.js');
+var ranking = require('./routes/Ranking.js');
+var re_verify = require('./routes/re-verify.js');
+var verification = require('./routes/verification.js');
 
 var app = express();
 
@@ -51,8 +57,18 @@ app.use(session({
     saveUninitialized: true
 }));
 
-
 app.use('/', index);
+app.use('/login', login);
+app.use('/SignUp',SignUp);
+app.use('/ranking',ranking);
+app.use('/problem',problem);
+app.use('/InsertP',InsertP);
+app.use('/challenge',challenge);
+app.use('/challenge-middle',challenge_middle);
+app.use('/notice',notice);
+app.use('/emforhstmffodldj',upnotice);
+app.use('/re-verify',re_verify);
+app.use('/verification',verification);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('challenge-middle');
+    if(req.session.nickname) res.render('challenge-middle');
+    else res.render('need-login');
 });
 
 module.exports = router;

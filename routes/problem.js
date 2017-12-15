@@ -20,7 +20,7 @@ router.get('/get/:problem_title',function(req,res){
                 var answer = result.answer;
                 var score = result.score;
                 if(req.body.answer===answer){
-                    res.render('',{correct:'correct!'});
+                    res.render('right-answer');
                     model.findOne(
                         {nickname:req.session.nickname},
                         function(err,result){
@@ -42,8 +42,7 @@ router.get('/get/:problem_title',function(req,res){
                         }
                     )
                 }else{
-                    res.render('');
-
+                    res.render('left-answer');
                 }
             }
         }

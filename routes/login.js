@@ -13,7 +13,7 @@ router.post('/',function(req,res){
         }
         if(result){
             if(result.verification === false){
-                res.redirect("");
+                res.redirect("/re-verify");
             }
 
             if(result.password === req.body.password){

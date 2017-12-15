@@ -7,12 +7,12 @@ router.get('/', function(req, res) {
     res.render('InsertP.html');
 }).post('/',function(req,res){
     problem = new ProblemModel({
-            string:req.body.string,
-            pnumber:req.body.pnumber,
-            answer:req.body.answer
+            title:req.body.title,
+            answer:req.body.answer,
+            score:req.body.score
         });
     ProblemModel.findOne({
-            pnumber:problem.pnumber
+            title:problem.title
         },
         function(err,result){
             if(err){
@@ -32,7 +32,7 @@ router.get('/', function(req, res) {
             }else {
                 res.json({
                     success:false,
-                    reason:'Already_used_number'
+                    reason:'Already_used_title'
                 })
             }
         }

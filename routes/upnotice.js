@@ -10,7 +10,8 @@ router.get('/',function(req,res){
    notice = new NoticeModel({
        title:req.body.title,
        script:req.body.script,
-       time:time
+       time:time,
+       notice:true
     });
    notice.save(function(err){
        if(err){

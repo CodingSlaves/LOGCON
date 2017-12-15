@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var schema = mongoose.Schema;
 
 var ProblemSchema = new schema({
-    string:{type:String},
-    pnumber:{type:Number},
+    title:{type:String},
     answer:{type:String},
     score:{type:Number}
 });

@@ -3,27 +3,14 @@ var router = express.Router();
 var ProblemModel = require('./ProblemModel');
 var model = require('./model');
 
-router.get('/get/:num',function(req,res){
+router.get('/get/:problem_title',function(req,res){
     if(!req.session) res.redirect('/login');
     else{
-     ProblemModel.findOne(
-         {pnum:req.params.num},
-         function(err,result){
-             if(err){
-                 console.log('fucking error'+err);
-                 throw err;
-             }
-             if(result){
-                 var problems = result.string;
-                 var pnumber = result.pnumber;
-                 res.render('',{problems:problems},{pnumber:pnumber});
-             }
-             else console.log('Failed');
-         }
-     )}
-}).post('/send/:num',function(req,res){
+        res.render(req.params.problem_title);
+    }
+}).post('/send/:problem_title',function(req,res){
     ProblemModel.findOne(
-        {pnumber:req.params.num},
+        {pnumber:req.params.problem_title},
         function(err,result){
             if(err){
                 console.log('fucking err in send/problem'+err);

@@ -375,6 +375,14 @@ html, body {
 .download {
     color: #648dff;
 }
+
+.router {
+    font-family: sans-serif;
+    text-align: left;
+    line-height: 110%;
+    color: #333333;
+    background: #eeeeee;
+}
 /* 진짜 문제 페이지들 끝 */
 
 

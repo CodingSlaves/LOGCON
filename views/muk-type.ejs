@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+    
+    <div class="paper">
+        <div class="float-left">
+            <img class="icon" src="/images/web.svg" alt="web">
+        </div>
+        <div class="welcome">
+            <spas class="welcome-font-big">
+                < 질뻐기의 타입은? > &nbsp; <span class="welcome-font-middle"><b>점수</b></span>
+            </spas>
+        </div>
+        <div class="paper-in">
+            <p>
+                HTML은 여러 가지의 버전이 있습니다.<br>
+                대부분의 HTML 문서에는 약속적으로 코드 가장 윗줄에 HTML의 버전을 알리는 '이것'을 함께 작성해 놓습니다.<br>
+                버전을 알 수 있는 '이것'은 HTML5 버전부터 길이가 굉장히 짧아졌습니다.<br>
+                HTML이 가장 처음 표준화되었을 때의 버전에서 '이것'의 코드 작성하세요.<br>
+                <br>
+                
+                (주의 : 답칸에는 영문의 소문자로만, 띄어쓰기는 언더바(_)로 써주시기 바랍니다.)
+            </p>
+
+            <form action="/problem/send/muk-type" method="post">
+                <input class="flag-input" name="answer" type="text" placeholder="answer" minlength="1" maxlength="500">
+                <input class="flag-submit" type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

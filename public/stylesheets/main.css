@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Noto Sans KR', sans-serif;
+    text-decoration:none;
 }
 
 html, body {
@@ -386,5 +387,24 @@ html, body {
 }
 .color-FFFFFF {
     color: #ffffff;
+}
+.float-left {
+    float: left;
+}
+.float-none {
+    float: none;
+}
+.button-return {
+    width: 120px;
+    height: 40px;
+    margin: 15px auto;
+    border: 5px dashed #999999;
+    border-left: 7px solid #71bd46;
+    color: #000000;
+    background: #fefff3;
+    transition: 0.3s;
+}
+.button-return:hover {
+    box-shadow: 0 1px 7px #71bd46;
 }
 /* 공통 끝 */

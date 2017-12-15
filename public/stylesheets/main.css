@@ -340,7 +340,8 @@ html, body {
     font-family: "Arial";
 }
 .found {
-    margin-top: -2.5em;
+    font-size: xx-large;
+    margin-top: -5em;
 }
 /* 404 끝 */
 

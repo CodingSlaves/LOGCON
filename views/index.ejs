@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="javascripts/main.js"></script>
-    <title>로그콘</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css" />
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
 </head>
 
 <!-- 오류중학교를 영어로하면? -->
@@ -17,33 +17,30 @@
 
 <body>
     <div class="header">
-        <img class="logo" src="images/logo.png">
+        <img class="logo" src="/images/logo.png">
         <div class="nav">
             <div class="nav-item">
-                <a href="index.html">
+                <a href="index.ejs">
                     메인
                 </a>
             </div>
             <div class="nav-item">
-                <a href="notice.html">
+                <a href="notice.ejs">
                     공지
                 </a>
             </div>
-            <div id="challenge-sort" class="nav-item">
-                <a>
-                    문제
+            <div class="nav-item">
+                <a href="challenge.ejs">
+                    고등문제
                 </a>
-                <div id="challenge-sort-box">
-                    <div class="container-out">
-                        <div class="container-in">
-                            <div class="deung">중등</div>
-                            <div class="deung">고등</div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="nav-item">
-                <a href="ranking.html">
+                <a href="challenge-middle.ejs">
+                    중등문제
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="ranking.ejs">
                     순위
                 </a>
             </div>

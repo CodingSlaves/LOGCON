@@ -19,27 +19,27 @@
         <img class="logo" src="/images/logo.png">
         <div class="nav">
             <div class="nav-item">
-                <a href="index.ejs">
+                <a href="/index">
                     메인
                 </a>
             </div>
             <div class="nav-item">
-                <a href="notice.ejs">
+                <a href="/notice">
                     공지
                 </a>
             </div>
             <div class="nav-item">
-                <a href="challenge.ejs">
+                <a href="/challenge">
                     고등문제
                 </a>
             </div>
             <div class="nav-item">
-                <a href="challenge-middle.ejs">
+                <a href="/challenge-middle">
                     중등문제
                 </a>
             </div>
             <div class="nav-item">
-                <a href="ranking.ejs">
+                <a href="/ranking">
                     순위
                 </a>
             </div>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <form id="logout" action="***** 로그아웃 경로 *****" method="post">
+            <form id="logout" action="/logout" method="post">
                 <div id="cursor-default" class="tab-item disabled">
                     <div class="container-out">
                         <div class="container-in">
@@ -85,33 +85,14 @@
             </form>
         </div>
 
-        <form id="log-in" action="***** 경로 *****" method="post">
+        <form id="log-in">
             <div class="gather">
                 <div class="container-out">
                     <div class="container-in">
-                        Your name : <%= %><br><br>  <!-- 플레이어.이름 -->
-                        Ranking : <%= %><br><br>    <!-- 플레이어.랭킹 -->
-                        Score : <%= %>  <!-- 플레이어.점수 -->
+                        Your name : <%= nickname%><br><br>  <!-- 플레이어.이름 -->
+                        Score : <%= score%>  <!-- 플레이어.점수 -->
                     </div>
                 </div>
-            </div>
-            <div class="copyright">
-                <div class="container-out">
-                    <div class="container-in">
-                            Copyright@TeamLog
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <form id="sign-up" class="disabled" action="***** 경로 *****" method="post">
-            <div class="gather">
-                <input class="gather-bar gather-bar-sign-up" name="***** name *****" type="email" placeholder="Sign-Up : Email">
-                <br>
-                <input class="gather-bar gather-bar-sign-up" name="***** name *****" type="text" placeholder="Sign-Up : ID">
-                <br>
-                <input class="gather-bar gather-bar-sign-up" name="***** name *****" type="password" placeholder="Sign-Up : PW">
-                <input class="gather-submit" type="submit">
             </div>
             <div class="copyright">
                 <div class="container-out">

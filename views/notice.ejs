@@ -19,27 +19,27 @@
         <img class="logo" src="/images/logo.png">
         <div class="nav">
             <div class="nav-item">
-                <a href="index.ejs">
+                <a href="/index">
                     메인
                 </a>
             </div>
             <div class="nav-item">
-                <a href="notice.ejs">
+                <a href="/notice">
                     공지
                 </a>
             </div>
             <div class="nav-item">
-                <a href="challenge.ejs">
+                <a href="/challenge">
                     고등문제
                 </a>
             </div>
             <div class="nav-item">
-                <a href="challenge-middle.ejs">
+                <a href="/challenge-middle">
                     중등문제
                 </a>
             </div>
             <div class="nav-item">
-                <a href="ranking.ejs">
+                <a href="/ranking">
                     순위
                 </a>
             </div>
@@ -66,25 +66,13 @@
                     <th class="date">시간</th>
                 </tr>
 
-                <% for (var i = 0; i < ****.length; i++) { %>   <!-- 공지사항 -->
+                <% for (var i = 0; i < notice.length; i++) { %>   <!-- 공지사항 -->
                     <tr>
-                        <td><%= ****[i].**** %></td>    <!-- 공지사항 제목 -->
-                        <td class="substance"><%= ****[i].**** %></td>  <!-- 공지사항 내용 -->
-                        <td><%= ****[i].**** %></td>    <!-- 공지사항 등록 날자와 시간 (ex: '11월 19일 5시 30분' => '11.19 / 5:30'   문론 바꿔도 됨) -->
+                        <td><%= notice[i].title %></td>    <!-- 공지사항 제목 -->
+                        <td class="substance"><%= notice[i].script %></td>  <!-- 공지사항 내용 -->
+                        <td><%= notice[i].time %></td>    <!-- 공지사항 등록 날자와 시간 (ex: '11월 19일 5시 30분' => '11.19 / 5:30'   문론 바꿔도 됨) -->
                     </tr>
                 <% } %>
-
-
-
-                <!-- 실험용이니 실제 서버가 가동되면 이 부분은 지우세요 -->
-                <tr>
-                    <td>(테스트) 대회 시작</td>
-                    <td class="substance">게임이 시작되었습니다. 참가자분들은 '문제'항목으로 이동하신 후 문제풀이를 시작하시면 됩니다. (테스트 입니다.)</td>
-                    <td>11.29 / 5:30</td>
-                </tr>
-                <!-- 여기까지 지우시면 됩니다. -->
-
-
 
             </table>
         </div>

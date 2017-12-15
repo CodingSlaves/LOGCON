@@ -9,7 +9,7 @@ router.get('/',function(req,res){
             throw err;
         }
         if(result){
-            res.render("ranking",{userlist:result});
+            res.render("ranking",{userprofile:result});
         }
 
     })

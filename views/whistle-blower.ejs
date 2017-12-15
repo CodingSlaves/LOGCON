@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+    
+    <div class="paper">
+        <div class="float-left">
+            <img class="icon" src="/images/server.svg" alt="server">
+        </div>
+        <div class="welcome">
+            <spas class="welcome-font-big">
+                < 내부 고발자 > &nbsp; <span class="welcome-font-middle"><b>300</b></span>
+            </spas>
+        </div>
+        <div class="paper-in">
+            <p>
+                클라이언트가 어떤 웹 서비스에 데이터를 요청할 때 Reverse Proxy가 이 요청을 받아서 내부 서버에서 데이터를 받은 후 클라이언트에 전달합니다.<br>
+                이렇게 구성하는 이유는 보안 때문입니다.<br>
+                <br>
+                한 가지 예를 들자면 보통 기업의 네트워크 환경은 DMZ라고 하는 내부 네트워크와 외부 네트워크 사이에 위치하는 구간이 존재합니다.<br>
+                이 구간에는 외부 서비스를 제공하는 서버가 있습니다.<br>
+                <br>
+                XX사는 서비스를 자바로 구현해서 WAS를 DMZ에 놓고 서비스해도 되지만 WAS는 보통 '이것'과 연결되어서 이것이 심각한 문제를 유발할 수 있으므로 Reverse Proxy 서버 사용을 지향하고 있습니다.<br>
+                <br>
+                
+                여기서 '이것'은 무엇일까요?<br>
+                <br>
+                
+                (주의 : 답칸에는 영문의 소문자로만, 띄어쓰기 없이 풀네임을 써주시기 바랍니다.)
+            </p>
+
+            <form action="/problem/send/whistle-blower" method="post">
+                <input class="flag-input" name="answer" type="text" placeholder="answer" minlength="1" maxlength="500">
+                <input class="flag-submit" type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

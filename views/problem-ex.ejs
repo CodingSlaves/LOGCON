@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+    
+    <div class="paper">
+        <div class="float-left">
+            <img class="icon" src="/images/이미지.svg" alt="이미지">
+        </div>
+        <div class="welcome">
+            <spas class="welcome-font-big">
+                < 제목 > &nbsp; <span class="welcome-font-middle"><b>점수</b></span>
+            </spas>
+        </div>
+        <div class="paper-in">
+            <p>
+                
+                
+                
+                <br>
+                
+                (주의 : 답칸에는 영문의 소문자로만, 띄어쓰기 없이 풀네임을 써주시기 바랍니다.)
+            </p>
+
+            <form action="/problem/send/문제 파일 이름" method="post">
+                <input class="flag-input" name="answer" type="text" placeholder="answer" minlength="1" maxlength="500">
+                <input class="flag-submit" type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

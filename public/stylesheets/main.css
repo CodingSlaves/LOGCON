@@ -2,7 +2,13 @@
 
 * {
     font-family: 'Noto Sans KR', sans-serif;
-    text-decoration:none;
+    text-decoration: none;
+}
+
+p {
+    text-align: left;
+    font-size: large;
+    line-height: 40px;
 }
 
 html, body {
@@ -115,6 +121,9 @@ html, body {
 
 .welcome-font-middle {
     font-size: x-large;
+}
+.welcom-font-none {
+    font-size: large;
 }
 /* 메인 끝 */
 
@@ -274,7 +283,7 @@ html, body {
     color: #ffffff;
 }
 .flag-input {
-    width: 350px;
+    width: 400px;
 }
 .challenge-set {
     width: auto;
@@ -357,6 +366,11 @@ html, body {
     padding: 50px;
     background: #fefff3;
 }
+
+.paper-in {
+    padding: 50px;
+}
+
 /* 진짜 문제 페이지들 끝 */
 
 

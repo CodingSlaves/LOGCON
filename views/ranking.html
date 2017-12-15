@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../public/javascripts/main.js"></script>
+    <title>로그콘</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/main.css" />
+</head>
+
+<!-- 아이언맨의 왼팔을 뭐라고할까? -->
+<!-- (토니)스타크레프트 -->
+
+<body>
+    <div class="header">
+        <img class="logo" src="../public/images/logo.png">
+        <div class="nav">
+            <div class="nav-item">
+                <a href="index.html">
+                    메인
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="notice.html">
+                    공지
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="challenge.html">
+                    문제
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="ranking.html">
+                    순위
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="ranking">
+        <div class="welcome">
+            <span class="welcome-font-big">
+                순위
+                <br>
+            </span>
+            <br/>
+        </div>
+
+        <table>
+            <tr>
+                <th class="rank-rank">순위</th>
+                <th class="rank-nickname">닉네임</th>
+                <th class="rank-affiliation">소속</th>
+                <th class="rank-score">점수</th>
+            </tr>
+
+            <% for (var i = 0; i < ****.length; i++) { %>   <!-- 플레이어 -->
+                <tr>
+                    <td><%= ****[i].**** %></td>    <!-- 플레이어[i].랭킹 -->
+                    <td><%= ****[i].**** %></td>    <!-- 플레이어[i].닉네임 -->
+                    <td><%= ****[i].**** %></td>    <!-- 플레이어[i].소속 -->
+                    <td><%= ****[i].**** %></td>    <!-- 플레이어[i].점수 -->
+                </tr>
+            <% } %>
+
+
+
+            <!-- 테스트용이니 실제 서버가 가동되면 이 부분은 지우세요 -->
+                <tr>
+                    <td>13</td>
+                    <td>슬라임잼</td>
+                    <td>선린인터넷고등학교</td>
+                    <td>150</td>
+                </tr>
+            <!-- 여기까지 지우시면 됩니다. -->
+
+
+
+        </table>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../public/javascripts/main.js"></script>
+    <title>로그콘</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/main.css" />
+</head>
+
+<!-- 코가 현재진행형이면? -->
+<!-- coding -->
+
+<body>
+    <div class="header">
+        <img class="logo" src="../public/images/logo.png">
+        <div class="nav">
+            <div class="nav-item">
+                <a href="index.html">
+                    메인
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="notice.html">
+                    공지
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="challenge.html">
+                    문제
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="ranking.html">
+                    순위
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="container-out">
+            <div class="container-in">
+                <div class="welcome">
+                    <span class="welcome-font">
+                        <b>LOGCON</b>
+                        <br>
+                    </span>
+                    <br/>
+                    <spas class="welcome-font-middle">
+                        로그콘에 오신것을 환영합니다!
+                    </spas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="forms">
+        <div class="tabs">
+            <div class="tab-item">
+                <div class="container-out">
+                    <div class="container-in">
+                        Hello, Player!
+                    </div>
+                </div>
+            </div>
+            <form id="logout" action="***** 로그아웃 경로 *****" method="post">
+                <div id="cursor-default" class="tab-item disabled">
+                    <div class="container-out">
+                        <div class="container-in">
+                            <input class="no-button" type="submit" value="Log-out">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <form id="log-in" action="***** 경로 *****" method="post">
+            <div class="gather">
+                <div class="container-out">
+                    <div class="container-in">
+                        Your name : <%= %><br><br>  <!-- 플레이어.이름 -->
+                        Ranking : <%= %><br><br>    <!-- 플레이어.랭킹 -->
+                        Score : <%= %>  <!-- 플레이어.점수 -->
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container-out">
+                    <div class="container-in">
+                            Copyright@TeamLog
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form id="sign-up" class="disabled" action="***** 경로 *****" method="post">
+            <div class="gather">
+                <input class="gather-bar gather-bar-sign-up" name="***** name *****" type="email" placeholder="Sign-Up : Email">
+                <br>
+                <input class="gather-bar gather-bar-sign-up" name="***** name *****" type="text" placeholder="Sign-Up : ID">
+                <br>
+                <input class="gather-bar gather-bar-sign-up" name="***** name *****" type="password" placeholder="Sign-Up : PW">
+                <input class="gather-submit" type="submit">
+            </div>
+            <div class="copyright">
+                <div class="container-out">
+                    <div class="container-in">
+                            <span class="blue">C</span>op<span class="purple">y</span>right@<span class="green">Tea</span>m<span class="peach">L</span>og
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

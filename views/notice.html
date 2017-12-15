@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../public/javascripts/main.js"></script>
+    <title>로그콘</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../public/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../public/stylesheets/main.css" />
+</head>
+
+<!-- 'E'가 가고있으면? -->
+<!-- 'egoing' -->
+
+<body>
+    <div class="header">
+        <img class="logo" src="../public/images/logo.png">
+        <div class="nav">
+            <div class="nav-item">
+                <a href="index.html">
+                    메인
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="notice.html">
+                    공지
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="challenge.html">
+                    문제
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="ranking.html">
+                    순위
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="notice">
+        <div id="notice-inner">
+            <div class="welcome">
+                <span class="welcome-font-big">
+                    공지사항
+                    <br>
+                </span>
+                <br/>
+                <spas class="welcome-font-middle">
+                    중요한 공지가 올라올 수 있으니 자주 확인 부탁드립니다.<br><br>
+                </spas>
+            </div>
+            <table>
+                <tr>
+                    <th class="title">제목</th>
+                    <th class="substance">내용</th>
+                    <th class="date">시간</th>
+                </tr>
+
+                <% for (var i = 0; i < ****.length; i++) { %>   <!-- 공지사항 -->
+                    <tr>
+                        <td><%= ****[i].**** %></td>    <!-- 공지사항 제목 -->
+                        <td class="substance"><%= ****[i].**** %></td>  <!-- 공지사항 내용 -->
+                        <td><%= ****[i].**** %></td>    <!-- 공지사항 등록 날자와 시간 (ex: '11월 19일 5시 30분' => '11.19 / 5:30'   문론 바꿔도 됨) -->
+                    </tr>
+                <% } %>
+
+
+
+                <!-- 실험용이니 실제 서버가 가동되면 이 부분은 지우세요 -->
+                    <tr>
+                        <td>(테스트) 대회 시작</td>
+                        <td class="substance">게임이 시작되었습니다. 참가자분들은 '문제'항목으로 이동하신 후 문제풀이를 시작하시면 됩니다. (테스트 입니다.)</td>
+                        <td>11.29 / 5:30</td>
+                    </tr>
+                <!-- 여기까지 지우시면 됩니다. -->
+
+
+
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

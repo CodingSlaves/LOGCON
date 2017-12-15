@@ -64,7 +64,7 @@
                 <th class="rank-score">점수</th>
             </tr>
 
-            <% for (var i = 0; i < userprofile.length; i++) { %>   <!-- 플레이어 -->
+            <% for (var i = 1; i <= userprofile.length; i++) { %>   <!-- 플레이어 -->
                 <tr>
                     <td><%= i%></td>    <!-- 플레이어[i].랭킹 -->
                     <td><%= userprofile[i].name %></td>    <!-- 플레이어[i].닉네임 -->

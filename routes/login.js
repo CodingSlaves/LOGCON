@@ -3,27 +3,27 @@ var router=express.Router();
 var model = require('./model');
 var filter = require('./filtering');
 
-router.get('/', function(req, res) {
-    res.render('login',{
-        err:''
-    });
-}).post('/',function(req,res){
+router.post('/',function(req,res){
     model.findOne({
-        number:req.body.number
+        nickname:req.body.nickname
     }, function(err, result){
         if(err){
             console.log('/login ERR : '+err);
             throw err
         }
         if(result){
+            if(result.verification === false){
+                res.redirect("");
+            }
+
             if(result.password === req.body.password){
-                console.log('Login : '+result.username);
-                req.session.number=result.number;
-                req.session.solved=result.solved;
+                console.log('Login : '+result.nickname);
+                req.session.nickname = result.nickname;
+                req.session.score=result.score;
                 res.redirect('/');
             }
             else if(result.password !== req.body.password){
-                console.log('Password Error : '+result.username);
+                console.log('Password Error : '+result.nickname);
                 res.render('login',{
                     err:' (Password Error)'
                 });

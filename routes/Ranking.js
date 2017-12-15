@@ -3,8 +3,15 @@ var router = express.Router();
 var model = require('./model');
 
 router.get('/',function(req,res){
-    model.find(function(err,result){
-        res.render("ranking",{userlist:result});
+    model.find({verification:true}).sort({score:-1},function(err,result){
+        if(err){
+            console.log("db(ranking)err");
+            throw err;
+        }
+        if(result){
+            res.render("ranking",{userlist:result});
+        }
+
     })
 });
 

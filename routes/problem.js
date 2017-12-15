@@ -7,7 +7,7 @@ router.get('/get/:num',function(req,res){
     if(!req.session) res.redirect('/login');
     else{
      ProblemModel.findOne(
-         {pnum:req.param('num')},
+         {pnum:req.params.num},
          function(err,result){
              if(err){
                  console.log('fucking error'+err);
@@ -23,7 +23,7 @@ router.get('/get/:num',function(req,res){
      )}
 }).post('/send/:num',function(req,res){
     ProblemModel.findOne(
-        {pnumber:req.param('num')},
+        {pnumber:req.params.num},
         function(err,result){
             if(err){
                 console.log('fucking err in send/problem'+err);
@@ -35,7 +35,7 @@ router.get('/get/:num',function(req,res){
                 if(req.body.answer===answer){
                     res.render('',{correct:'correct!'});
                     model.findOne(
-                        {username:req.session.username},
+                        {nickname:req.session.nickname},
                         function(err,result){
                           if(err){
                               console.log('fucking err in send/user'+err)

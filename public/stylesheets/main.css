@@ -365,6 +365,7 @@ html, body {
     border-bottom: 15px solid #71bd46;
     padding: 50px;
     background: #fefff3;
+    box-shadow: 0px 20px 20px;
 }
 
 .paper-in {

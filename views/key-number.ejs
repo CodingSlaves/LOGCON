@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+    
+    <div class="paper">
+        <div class="float-left">
+            <img class="icon" src="/images/network.svg" alt="network">
+        </div>
+        <div class="welcome">
+            <spas class="welcome-font-big">
+                < 열쇠번호 440 > &nbsp; <span class="welcome-font-middle"><b>점수</b></span>
+            </spas>
+        </div>
+        <div class="paper-in">
+            <p>
+                CentOS에서 ssh-key를 이용하여 원격 서버에 접속하려고 한다.<br>
+                ssh-keygen 명령어를 사용하여 키를 생성 한 후 public key를 서버에 전송하여 접속에 성공하였다.<br>
+                <br>
+                이때 Public key의 권한에서 Private key의 권한을 뺀 값을 숫자 표기법으로 나타내면?<br>
+                <br>
+            </p>
+
+            <form action="/problem/send/key-number" method="post">
+                <input class="flag-input" name="answer" type="text" placeholder="answer" minlength="1" maxlength="500">
+                <input class="flag-submit" type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

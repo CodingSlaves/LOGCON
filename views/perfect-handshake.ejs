@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+    
+    <div class="paper">
+        <div class="float-left">
+            <img class="icon" src="/images/network.svg" alt="network">
+        </div>
+        <div class="welcome">
+            <spas class="welcome-font-big">
+                < 완벽한 악수 > &nbsp; <span class="welcome-font-middle"><b>점수</b></span>
+            </spas>
+        </div>
+        <div class="paper-in">
+            <p>
+                ssl 웹 서버에 접속 중 Full Handshake 과정의 패킷을 캡처 하였다.<br>
+                맨 처음 패킷 안에서 클라이언트가 지원 가능한 보안 방식의 정보를 담고 있는 필드의 이름은?<br>
+                <br>
+                
+                (주의 : 답칸에는 영문의 소문자로만, 띄어쓰기는 언더바(_)로 써주시기 바랍니다.)
+            </p>
+
+            <form action="/problem/send/perfect-handshake" method="post">
+                <input class="flag-input" name="answer" type="text" placeholder="answer" minlength="1" maxlength="500">
+                <input class="flag-submit" type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

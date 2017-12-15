@@ -64,16 +64,14 @@
                 <th class="rank-score">점수</th>
             </tr>
 
-            <% for (var i = 1; i <= user.length; i++) { %>   <!-- 플레이어 -->
+            <% for (var i = 0; i < users.length; i++) { %>   <!-- 플레이어 -->
                 <tr>
-                    <td><%= i%></td>    <!-- 플레이어[i].랭킹 -->
-                    <td><%= user[i].name %></td>    <!-- 플레이어[i].닉네임 -->
-                    <td><%= user[i].school %></td>    <!-- 플레이어[i].소속 -->
-                    <td><%= user[i].score %></td>    <!-- 플레이어[i].점수 -->
+                    <td><%= i+1%></td>    <!-- 플레이어[i].랭킹 -->
+                    <td><%= users[i].name %></td>    <!-- 플레이어[i].닉네임 -->
+                    <td><%= users[i].school %></td>    <!-- 플레이어[i].소속 -->
+                    <td><%= users[i].score %></td>    <!-- 플레이어[i].점수 -->
                 </tr>
             <% } %>
-
-
         </table>
     </div>
 

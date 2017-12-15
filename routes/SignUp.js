@@ -31,7 +31,8 @@ router.post('/',function(req,res){
         email:req.body.email,
         URL:randomString(10),
         verification:false,
-        grade:req.body.grade
+        grade:req.body.grade,
+        score:0
     });
     model.findOne({
         email:req.body.email,

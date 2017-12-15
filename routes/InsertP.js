@@ -1,7 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var ProblemModel = require('./ProblemModel');
-
+function randomString(num) {
+    var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+    var string_length = num;
+    var randomstring = '';
+    for (var i=0; i<string_length; i++) {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum,rnum+1);
+    }
+    return randomstring;
+}
 /* GET home page. */
 router.get('/', function(req, res) {
     res.render('InsertP.html');
@@ -9,7 +18,8 @@ router.get('/', function(req, res) {
     problem = new ProblemModel({
             title:req.body.title,
             answer:req.body.answer,
-            score:req.body.score
+            score:req.body.score,
+            flag:randomString(10)
         });
     ProblemModel.findOne({
             title:problem.title

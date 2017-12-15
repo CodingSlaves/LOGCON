@@ -10,7 +10,7 @@ router.get('/get/:problem_title',function(req,res){
     }
 }).post('/send/:problem_title',function(req,res){
     ProblemModel.findOne(
-        {pnumber:req.params.problem_title},
+        {title:req.params.problem_title},
         function(err,result){
             if(err){
                 console.log('fucking err in send/problem'+err);
@@ -29,21 +29,21 @@ router.get('/get/:problem_title',function(req,res){
                               throw err;
                           }
                           if(result){
-                              console.log('Success Find');
                               result.update(
                                   {score:score+result.score},
-                                  function(err,result){
+                                  function(err){
                                       if(err){
                                           console.log('fucking err in update');
                                           throw err;
                                       }
-                                      if(result)
-                                        console.log('Success update');
                                   }
                               )
                           }
                         }
                     )
+                }else{
+                    res.render('');
+
                 }
             }
         }

@@ -5,7 +5,7 @@ var filter = require('./filtering');
 
 router.post('/',function(req,res){
     model.findOne({
-        nickname:req.body.nickname
+        id:req.body.id
     }, function(err, result){
         if(err){
             console.log('/login ERR : '+err);
@@ -15,7 +15,6 @@ router.post('/',function(req,res){
             if(result.verification === false){
                 res.redirect("/re-verify");
             }
-
             if(result.password === req.body.password){
                 console.log('Login : '+result.nickname);
                 req.session.nickname = result.nickname;
@@ -37,6 +36,5 @@ router.post('/',function(req,res){
         }
     })
 });
-
 
 module.exports = router;

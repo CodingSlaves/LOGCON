@@ -8,8 +8,6 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var mongoose = require('mongoose');
 
-
-
 var index = require('./routes/index.js');
 var login = require('./routes/login.js');
 var SignUp =  require('./routes/SignUp.js');
@@ -22,6 +20,9 @@ var upnotice = require('./routes/upnotice.js');
 var ranking = require('./routes/Ranking.js');
 var re_verify = require('./routes/re-verify.js');
 var verification = require('./routes/verification.js');
+var success = require('./routes/success.js');
+var logout = require('./routes/logout.js');
+
 
 var app = express();
 
@@ -66,9 +67,11 @@ app.use('/InsertP',InsertP);
 app.use('/challenge',challenge);
 app.use('/challenge-middle',challenge_middle);
 app.use('/notice',notice);
-app.use('/emforhstmffodldj',upnotice);
+app.use('/wkdtjddbs',upnotice);
 app.use('/re-verify',re_verify);
 app.use('/verification',verification);
+app.use('/success',success);
+app.use('/logout',logout);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

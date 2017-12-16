@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/javascripts/main.js"></script>
+    <title>LOGCON</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+<body>
+    
+    <div class="paper">
+        <div class="float-left">
+            <img class="icon" src="/images/server.svg" alt="server">
+        </div>
+        <div class="welcome">
+            <spas class="welcome-font-big">
+                < 잡담 > &nbsp; <span class="welcome-font-middle"><b>점수</b></span>
+            </spas>
+        </div>
+        <div class="paper-in">
+            <p>
+                성윤이와 성훈이는 리눅스 수업 시간에 부장님 몰래 둘이서 잡담을 하려고 한다.<br>
+                이때 성윤이가 성훈이에게 메시지를 보낼 때 어떻게 명령어를 입력해야 할까?<br>
+                단, 성훈이의 사용자 이름은 sh이고 write 명령어를 사용해야 한다.<br>
+                
+                <br>
+                
+                (주의 : 답칸에는 영문의 소문자로만, 띄어쓰기는 언더바(_)로 써주시기 바랍니다.)<br>
+            </p>
+
+            <form action="/problem/send/small-talk" method="post">
+                <input class="flag-input" name="answer" type="text" placeholder="answer" minlength="1" maxlength="500">
+                <input class="flag-submit" type="submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

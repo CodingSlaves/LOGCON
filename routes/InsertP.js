@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
             title:req.body.title,
             answer:req.body.answer,
             score:req.body.score,
-            flag:req.body.flag
+            pnumber:req.body.pnumber
         });
     ProblemModel.findOne({
             title:problem.title

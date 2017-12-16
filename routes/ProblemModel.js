@@ -5,7 +5,6 @@ var ProblemSchema = new schema({
     title:{type:String},
     answer:{type:String},
     score:{type:Number},
-    flag:{type:String},
     pnumber:{type:Number}
 });
 

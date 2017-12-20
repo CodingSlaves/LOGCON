@@ -12,9 +12,20 @@ router.get('/', function(req, res) {
         }
         if(result){
             for(var i in result){
-                result[i].update({score:0});
+                user = new model({
+                    nickname:result[i].nickname,
+                    id:result[i].id,
+                    password:result[i].password,
+                    school:result[i].school,
+                    email:result[i].email,
+                    URL:result[i].email,
+                    verification:result[i].verification,
+                    grade:result[i].grade,
+                    score:0
+                });
+                user.save();
+                result[i].remove();
             }
-
         }
     });
 });

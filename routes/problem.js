@@ -45,12 +45,11 @@ router.get('/get/:problem_title',function(req,res){
                               throw err;
                           }
                           if(result){
-                              console.log(score);
                               result.update(
                                   {score:score+result.score},
                                   function(err){
                                       if(err){
-                                          console.log('fucking err in update');
+                                          console.log('fucking err in update'+score+result.score);
                                           throw err;
                                       }
                                   }

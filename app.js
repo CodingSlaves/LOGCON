@@ -22,6 +22,7 @@ var re_verify = require('./routes/re-verify.js');
 var verification = require('./routes/verification.js');
 var success = require('./routes/success.js');
 var logout = require('./routes/logout.js');
+var fuck = require('./routes/bugfix.js');
 
 
 var app = express();
@@ -72,6 +73,7 @@ app.use('/re-verify',re_verify);
 app.use('/verification',verification);
 app.use('/success',success);
 app.use('/logout',logout);
+app.use('/fuck',fuck);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

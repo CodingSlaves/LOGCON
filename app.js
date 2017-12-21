@@ -92,7 +92,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('404',{message:err.status});
+  res.render('404',{message:err.message});
 });
 
 module.exports = app;

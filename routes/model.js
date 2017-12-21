@@ -10,7 +10,8 @@ var UserSchema =  new schema({
     id:{type:String},
     URL:{type:String},
     verification:{type:Boolean},
-    grade:{type:Boolean}
+    grade:{type:Boolean},
+    problems:{type:Array}
 });
 
 var model=mongoose.model('User',UserSchema);

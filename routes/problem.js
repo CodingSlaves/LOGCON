@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var ProblemModel = require('./ProblemModel');
 var model = require('./model');
-var plus = require('./PlusModel');
 
 router.get('/get/:problem_title',function(req,res){
     if(!req.session) res.redirect('/need-login');
@@ -14,7 +13,6 @@ router.get('/get/:problem_title',function(req,res){
                     throw err;
                 }
                 if(result){
-                    console.log(req.session.problems[result.pnumber]);
                     if(req.session.problems[result.pnumber] === true){
                         res.render('sorted-answer');
                     }else
@@ -36,7 +34,6 @@ router.get('/get/:problem_title',function(req,res){
                 var score = result.score;
                 var pnumber = result.pnumber;
                 if(req.body.answer===answer){
-                    res.render('right-answer');
                     model.findOne(
                         {nickname:req.session.nickname},
                         function(err,result){
@@ -45,6 +42,18 @@ router.get('/get/:problem_title',function(req,res){
                               throw err;
                           }
                           if(result){
+                              req.session.problems[pnumber] = true;
+                              result.update(
+                                  {problems:req.session.problems},
+                                  function(err){
+                                      if(err){
+                                          console.log('fucking err in update');
+                                          throw err;
+                                      }
+                                      console.log(req.session.problems);
+                                      res.render('right-answer');
+                                  }
+                              );
                               result.update(
                                   {score:score+result.score},
                                   function(err){
@@ -55,27 +64,6 @@ router.get('/get/:problem_title',function(req,res){
                                   }
                               )
                           }
-                          plus.findOne({nickname:req.session.nickname},
-                              function(err,result){
-                                  if(err){
-                                      console.log("err in correct problem");
-                                      throw err;
-                                  }
-                                  if(result){
-                                      req.session.problems[pnumber] = true;
-                                      result.update({problems:req.session.problems},
-                                          function(err,result){
-                                          if(err){
-                                              console.log("err in plus update");
-                                              throw err;
-                                          }
-                                          if(result){
-                                              console.log(result.problems);
-                                          }
-                                      });
-                                  }
-                              }
-                          );
                         }
                     );
                 }else{

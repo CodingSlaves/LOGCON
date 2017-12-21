@@ -5,6 +5,7 @@ var filter = require('./filtering');
 router.get('/', function(req, res) {
     res.render('fuckkkkkkkkkkkkkk');
 }).post('/',function(){
+    var problems = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
     model.find(function(err,result){
         if(err){
             console.log("fucking err in bugfix");
@@ -12,6 +13,7 @@ router.get('/', function(req, res) {
         }
         if(result){
             for(var i in result){
+                console.log(result[i]);
                 user = new model({
                     nickname:result[i].nickname,
                     id:result[i].id,
@@ -21,10 +23,11 @@ router.get('/', function(req, res) {
                     URL:result[i].email,
                     verification:result[i].verification,
                     grade:result[i].grade,
-                    score:0
+                    score:0,
+                    problems:problems
                 });
-                user.save();
                 result[i].remove();
+                user.save();
             }
         }
     });

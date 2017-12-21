@@ -50,7 +50,6 @@ router.get('/get/:problem_title',function(req,res){
                                           console.log('fucking err in update');
                                           throw err;
                                       }
-                                      console.log(req.session.problems);
                                       res.render('right-answer');
                                   }
                               );

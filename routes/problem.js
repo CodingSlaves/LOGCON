@@ -50,7 +50,6 @@ router.get('/get/:problem_title',function(req,res){
                                           console.log('fucking err in update');
                                           throw err;
                                       }
-                                      res.render('right-answer');
                                   }
                               );
                               result.update(
@@ -60,7 +59,8 @@ router.get('/get/:problem_title',function(req,res){
                                           console.log('fucking err in update'+score+result.score);
                                           throw err;
                                       }
-                                      req.session.score += score;
+                                      req.session.score = score+result.score;
+                                      res.render('right-answer');
                                   }
                               )
                           }

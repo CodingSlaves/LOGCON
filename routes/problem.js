@@ -61,6 +61,7 @@ router.get('/get/:problem_title',function(req,res){
                                           console.log('fucking err in update'+score+result.score);
                                           throw err;
                                       }
+                                      req.session.score += score;
                                   }
                               )
                           }

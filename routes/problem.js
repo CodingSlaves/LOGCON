@@ -13,6 +13,7 @@ router.get('/get/:problem_title',function(req,res){
                     throw err;
                 }
                 if(result){
+                    console.log(result.pnumber);
                     if(req.session.problems[result.pnumber] === true){
                         res.render('sorted-answer');
                     }else
@@ -42,6 +43,7 @@ router.get('/get/:problem_title',function(req,res){
                               throw err;
                           }
                           if(result){
+                              console.log(pnumber);
                               req.session.problems[pnumber] = true;
                               result.update(
                                   {problems:req.session.problems},

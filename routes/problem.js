@@ -43,7 +43,7 @@ router.get('/get/:problem_title',function(req,res){
                               throw err;
                           }
                           if(result){
-                              console.log(pnumber);
+                              console.log(req.session.nickname + pnumber);
                               req.session.problems[pnumber] = true;
                               result.update(
                                   {problems:req.session.problems},

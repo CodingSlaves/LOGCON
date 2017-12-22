@@ -23,6 +23,7 @@ router.get('/get/:problem_title',function(req,res){
         );
     }
 }).post('/send/:problem_title',function(req,res){
+    if(!req.session) res.redirect('/');
     ProblemModel.findOne(
         {title:req.params.problem_title},
         function(err,result){

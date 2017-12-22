@@ -4,7 +4,7 @@ var ProblemModel = require('./ProblemModel');
 var model = require('./model');
 
 router.get('/get/:problem_title',function(req,res){
-    if(!req.session.problems) res.redirect('/need-login');
+    if(!req.session.problems) res.redirect('/challenge-middle');
     else{
         ProblemModel.findOne({title:req.params.problem_title},
             function(err,result){

@@ -4,7 +4,7 @@ var ProblemModel = require('./ProblemModel');
 var model = require('./model');
 
 router.get('/get/:problem_title',function(req,res){
-    if(!req.session) res.redirect('/need-login');
+    if(!req.session.problems) res.redirect('/need-login');
     else{
         ProblemModel.findOne({title:req.params.problem_title},
             function(err,result){
@@ -13,7 +13,6 @@ router.get('/get/:problem_title',function(req,res){
                     throw err;
                 }
                 if(result){
-                    if(!req.session.problems) res.redirect('/');
                     console.log(result.pnumber);
                     if(req.session.problems[result.pnumber] === true){
                         res.render('sorted-answer');

@@ -14,6 +14,7 @@ router.get('/get/:problem_title',function(req,res){
                 }
                 if(result){
                     console.log(result.pnumber);
+                    console.log(req.session);
                     if(req.session.problems[result.pnumber] === true){
                         res.render('sorted-answer');
                     }else

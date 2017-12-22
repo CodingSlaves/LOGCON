@@ -21,6 +21,7 @@ var smtpTransport = nodemailer.createTransport({
         pass: 'teamlogzzang2017'
     }
 });
+var problems = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
 /* GET home page. */
 router.post('/',function(req,res){
     user = new model({
@@ -32,7 +33,8 @@ router.post('/',function(req,res){
         URL:randomString(10),
         verification:false,
         grade:req.body.grade,
-        score:0
+        score:0,
+        problems:problems
     });
     model.findOne({
         email:req.body.email,

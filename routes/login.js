@@ -12,15 +12,17 @@ router.post('/',function(req,res){
             throw err
         }
         if(result){
-            if(result.verification === false){
-                res.redirect("/re-verify");
-            }
             if(result.password === req.body.password){
-                console.log('Login : '+result.nickname);
-                req.session.nickname = result.nickname;
-                req.session.score=result.score;
-                req.session.problems=result.problems;
-                res.redirect('/');
+                if(result.verification === false){
+                    req.session.nickname = result.nickname;
+                    res.redirect("/re-verify");
+                }else {
+                    console.log('Login : ' + result.nickname);
+                    req.session.nickname = result.nickname;
+                    req.session.score = result.score;
+                    req.session.problems = result.problems;
+                    res.redirect('/');
+                }
             }
             else if(result.password !== req.body.password){
                 console.log('Password Error : '+result.nickname);

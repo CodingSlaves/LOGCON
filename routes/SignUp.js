@@ -37,9 +37,7 @@ router.post('/',function(req,res){
         problems:problems
     });
     model.findOne({
-        email:req.body.email,
-        id:req.body.id,
-        nickname:req.body.nickname
+        email:req.body.email
     }, function(err, result) {
         if (err) {
             console.log("/SignUp Error : " + err);
@@ -51,27 +49,53 @@ router.post('/',function(req,res){
             });
         }
         else {
-            user.save(function(err){
-                if(err){
-                    console.log(err);
-                    res.render('404',{message:err});
-                }else{
-                    var mailOptions = {
-                        from: '팀로그 <teamlogsr@gmail.com>',
-                        to: req.body.email,
-                        subject: '이메일 인증 - LOGCON',
-                        text:'가입완료를 위해 <'+user.URL+'> 를 입력해주세요'
-                    };
-                    smtpTransport.sendMail(mailOptions, function(error, response){
-                        console.log(req.body.email);
-                        if (error){
-                            console.log(error);
-                        } else {
-                            console.log("Message sent : " + response);
-                        }
-                        smtpTransport.close();
+            model.findOne({nickname:req.body.nickname},function(err,result){
+                if (err) {
+                    console.log("/SignUp Error2 : " + err);
+                    throw err;
+                }
+                if (result) {
+                    res.render('404',{
+                        message:'이미 가입된 아이디 혹은 이미 가입된 이메일,닉네임 입니다.'
                     });
-                    res.redirect('/verification');
+                }
+                else{
+                    model.findOne({id:req.body.id},function(err,result){
+                        if (err) {
+                            console.log("/SignUp Error2 : " + err);
+                            throw err;
+                        }
+                        if (result) {
+                            res.render('404',{
+                                message:'이미 가입된 아이디 혹은 이미 가입된 이메일,닉네임 입니다.'
+                            });
+                        }
+                        else{
+                            user.save(function(err){
+                                if(err){
+                                    console.log(err);
+                                    res.render('404',{message:err});
+                                }else{
+                                    var mailOptions = {
+                                        from: '팀로그 <teamlogsr@gmail.com>',
+                                        to: req.body.email,
+                                        subject: '이메일 인증 - LOGCON',
+                                        text:'가입완료를 위해 <'+user.URL+'> 를 입력해주세요'
+                                    };
+                                    smtpTransport.sendMail(mailOptions, function(error, response){
+                                        console.log(req.body.email);
+                                        if (error){
+                                            console.log(error);
+                                        } else {
+                                            console.log("Message sent : " + response);
+                                        }
+                                        smtpTransport.close();
+                                    });
+                                    res.redirect('/verification');
+                                }
+                            });
+                        }
+                    })
                 }
             });
         }

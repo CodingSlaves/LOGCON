@@ -16,114 +16,110 @@
 <!-- 깔깔 아이고 부장님 -->
 
 <body>
-    <div class="header">
-        <img class="logo" src="/images/logo.png">
-        <div class="nav">
-            <div class="nav-item">
-                <a href="/">
-                    메인
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="/notice">
-                    공지
-                </a>
-            </div>
-<!--
-            <div class="nav-item">
-                <a href="/challenge-middle">
-                    문제
-                </a>
-            </div>
--->
-            <div class="nav-item">
-                <a href="/ranking/high">
-                    고등부 순위
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="/ranking/middle">
-                    중등부 순위
-                </a>
-            </div>
+<div class="header">
+    <img class="logo" src="images/logo.png">
+    <div class="nav">
+        <div class="nav-item">
+            <a href="/">
+                메인
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/notice">
+                공지
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/challenge-middle">
+                문제
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/ranking/high">
+                고등부 순위
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="/ranking/middle">
+                중등부 순위
+            </a>
         </div>
     </div>
+</div>
 
 
-    <div class="main">
-        <div class="container-out">
-            <div class="container-in">
-                <div class="welcome">
+<div class="main">
+    <div class="container-out">
+        <div class="container-in">
+            <div class="welcome">
                     <span class="welcome-font">
                         <b>LOGCON</b>
                         <br>
                     </span>
-                    <br/>
-                    <spas class="welcome-font-middle">
-                        로그콘이 종료되었습니다.<br>
-                        참여해주신 여러분 정말 수고하셨습니다.
-                    </spas>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!--
-    <div class="forms">
-        <div class="tabs">
-            <div id="log-in-tab" class="tab-item">
-                <div class="container-out">
-                    <div class="container-in">
-                        login
-                    </div>
-                </div>
-            </div>
-            <div id="sign-up-tab" class="tab-item disabled">
-                <div class="container-out">
-                    <div class="container-in">
-                        sign-up
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <form id="log-in" action="/login" method="post">
-            <div class="gather">
-                <input class="gather-bar" name="id" type="text" placeholder="ID" minlength="5" maxlength="20">
                 <br/>
-                <input class="gather-bar" name="password" type="password" placeholder="PW" minlength="6" maxlength="30">
-                <input class="gather-submit" type="submit">
+                <spas class="welcome-font-middle">
+                    로그콘에 오신것을 환영합니다!
+                </spas>
             </div>
-            <div class="copyright">
-                <div class="container-out">
-                    <div class="container-in">
-                            Copyright@TeamLog
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <form id="sign-up" class="disabled" action="/SignUp" method="post">
-            <div class="gather">
-                <input class="gather-bar gather-bar-sign-up" name="email" type="email" placeholder="Email" minlength="5" maxlength="30">
-                <input class="gather-bar gather-bar-sign-up" name="id" type="text" placeholder="Sign-Up : ID" minlength="5" maxlength="20">
-                <br>
-                <input class="gather-bar gather-bar-sign-up" name="nickname" type="text" placeholder="Nickname"minlength="2" maxlength="20">
-                <input class="gather-bar gather-bar-sign-up" name="password" type="password" placeholder="Sign-Up : PW" minlength="6" maxlength="30">
-                <br>
-                <input class="gather-bar gather-bar-sign-up" name="school" type="text" placeholder="Affiliation (ex : 오류중학교)" minlength="4" maxlength="15">
-                <input type="radio" id="contactChoice1" name="grade" value=false><label class="color-FFFFFF" for="contactChoice1">중학생</label> &nbsp; &nbsp; <input type="radio" id="contactChoice2" name="grade" value=true><label class="color-FFFFFF" for="contactChoice2">고등학생</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input class="gather-submit" type="submit">
-            </div>
-            <div class="copyright">
-                <div class="container-out">
-                    <div class="container-in">
-                        Copyright@TeamLog
-                    </div>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
--->
+</div>
+
+
+<div class="forms">
+    <div class="tabs">
+        <div id="log-in-tab" class="tab-item">
+            <div class="container-out">
+                <div class="container-in">
+                    login
+                </div>
+            </div>
+        </div>
+        <div id="sign-up-tab" class="tab-item disabled">
+            <div class="container-out">
+                <div class="container-in">
+                    sign-up
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="log-in" action="/login" method="post">    <!-- 로그인 폼 -->
+        <div class="gather">
+            <input class="gather-bar" name="id" type="text" placeholder="ID" minlength="5" maxlength="20">    <!-- 아이디 -->
+            <br/>
+            <input class="gather-bar" name="password" type="password" placeholder="PW" minlength="6" maxlength="30">    <!-- 비밀번호 -->
+            <input class="gather-submit" type="submit">
+        </div>
+        <div class="copyright">
+            <div class="container-out">
+                <div class="container-in">
+                    Copyright@TeamLog
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form id="sign-up" class="disabled" action="/SignUp" method="post">  <!-- 회원가입 폼 -->
+        <div class="gather">
+            <input class="gather-bar gather-bar-sign-up" name="email" type="email" placeholder="Email" minlength="5" maxlength="30"> <!-- 이메일 -->
+            <input class="gather-bar gather-bar-sign-up" name="id" type="text" placeholder="Sign-Up : ID" minlength="5" maxlength="20">   <!-- 아이디 -->
+            <br>
+            <input class="gather-bar gather-bar-sign-up" name="nickname" type="text" placeholder="Nickname"minlength="2" maxlength="20">    <!-- 닉네임 -->
+            <input class="gather-bar gather-bar-sign-up" name="password" type="password" placeholder="Sign-Up : PW" minlength="6" maxlength="30">   <!-- 비밀번호 -->
+            <br>
+            <input class="gather-bar gather-bar-sign-up" name="school" type="text" placeholder="Affiliation (ex : 오류중학교)" minlength="4" maxlength="15">   <!-- 소속 -->
+            <input type="radio" id="contactChoice1" name="grade" value=false><label class="color-FFFFFF" for="contactChoice1">중학생</label> &nbsp; &nbsp; <input type="radio" id="contactChoice2" name="grade" value=true><label class="color-FFFFFF" for="contactChoice2">고등학생</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input class="gather-submit" type="submit">
+        </div>
+        <div class="copyright">
+            <div class="container-out">
+                <div class="container-in">
+                    Copyright@TeamLog
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
 </body>
 

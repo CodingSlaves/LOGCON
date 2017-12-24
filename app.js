@@ -59,19 +59,19 @@ app.use(session({
 }));
 
 app.use('/', index);
-app.use('/login', login);
-app.use('/SignUp',SignUp);
+//app.use('/login', login);
+//app.use('/SignUp',SignUp);
 app.use('/ranking',ranking);
-app.use('/problem',problem);
+//app.use('/problem',problem);
 app.use('/InsertP',InsertP);
-app.use('/challenge',challenge);
-app.use('/challenge-middle',challenge_middle);
+//app.use('/challenge',challenge);
+//app.use('/challenge-middle',challenge_middle);
 app.use('/notice',notice);
 app.use('/wkdtjddbs',upnotice);
 app.use('/re-verify',re_verify);
 app.use('/verification',verification);
 app.use('/success',success);
-app.use('/logout',logout);
+//app.use('/logout',logout);
 app.use('/fuck',fuck);
 
 // catch 404 and forward to error handler

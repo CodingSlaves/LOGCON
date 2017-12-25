@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var model = require('./model');
 
-var pscore=[300,300,300,500,200,100,400,300,100,300,200,500,100,100,100,700,0,0,0,0,0];
+var pscore=[300,300,300,500,200,100,400,300,100,300,200,500,100,100,100,700,0,0,0,0,0,0];
 var score =0;
 router.get('/',function(req,res){
     model.find({grade:false},function(err,result){
@@ -10,6 +10,7 @@ router.get('/',function(req,res){
             score = 0;
             for(var k in result[i].problems){
                 if(result[i].problems[k] === true){
+
                     console.log(pscore[k]);
                     score += pscore[k];
                 }

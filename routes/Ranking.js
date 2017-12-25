@@ -10,6 +10,7 @@ router.get('/',function(req,res){
             score = 0;
             for(var k in result[i].problems){
                 if(result[i].problems[k] === true){
+                    console.log(pscore[k]);
                     score += pscore[k];
                 }
             }
